@@ -5,4 +5,4 @@ const API = axios.create({
 });
 
 export const fetchItems = () => API.get('/items');
-export const createItem = (formData) => API.post('/items', formData);
+export const createItem = (formData) => API.post('/add', formData);
