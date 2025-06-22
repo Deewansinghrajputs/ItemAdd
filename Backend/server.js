@@ -13,7 +13,11 @@ app.use('/uploads', express.static('uploads'));
 
 connectDB();
 
-app.use('/api/items', itemRoutes);
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
+app.use('/api', itemRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {

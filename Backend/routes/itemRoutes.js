@@ -17,7 +17,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 router.post(
-  '/',
+  '/add',
   upload.fields([
     { name: 'coverImage', maxCount: 1 },
     { name: 'additionalImages', maxCount: 10 },
@@ -25,6 +25,6 @@ router.post(
   addItem
 );
 
-router.get('/', getItems);
+router.get('/items', getItems);
 
 export default router;
