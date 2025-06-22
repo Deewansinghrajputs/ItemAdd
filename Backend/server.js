@@ -13,9 +13,9 @@ app.use('/uploads', express.static('uploads'));
 
 connectDB();
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+// app.get('/', (req, res) => {
+//   res.send('Hello World!')
+// })
 
 app.use('/api', itemRoutes);
 
